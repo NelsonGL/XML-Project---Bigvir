@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   targetNamespace="https://datapipelineassignment.org/XML" 
+		   elementFormDefault="qualified" 
+		   xmlns:fs="https://datapipelineassignment.org/XML">
+
+
+	<xs:element name ="BigVir2084_database" type="fs:BigVir2084_databasetype">
+<!-- ########################### KEYS and KEYREFS ########################### -->
+		<xs:key name="doctorID">
+			<xs:selector xpath=".//fs:doctor/fs:doctor"/>
+			<xs:field xpath="@d_ID"/>
+		</xs:key>
+		<xs:keyref name="refdoctor" refer="fs:doctorID">
+			<xs:selector xpath=".//fs:med_hist/fs:consultation"/>
+			<xs:field xpath="@refdoctorID"/>
+		</xs:keyref>
+		<xs:key name="vaccineID">
+			<xs:selector xpath=".//fs:vaccine/fs:vaccine"/>
+			<xs:field xpath="@v_ID"/>
+		</xs:key>
+		<xs:keyref name="refvaccine" refer="fs:vaccineID">
+			<xs:selector xpath=".//fs:med_hist/fs:vaccination_stat"/>
+			<xs:field xpath="@refvaccineID"/>
+		</xs:keyref>
+		<xs:key name="citizenID">
+			<xs:selector xpath="fs:citizens/fs:citizen"/>
+			<xs:field xpath="@c_ID"/>
+		</xs:key>
+	</xs:element>
+<!-- Declaring root fields database type-->
+	<xs:complexType name="BigVir2084_databasetype">
+		<xs:sequence>
+			<xs:element name ="citizens" type="fs:citizensType"/>
+			<xs:element name ="doctor" type="fs:doctorType">
+			</xs:element>
+			<xs:element name ="vaccine" type="fs:vaccineType">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+<!-- ########################### Declaring citizen info fields ########################### -->
+	<xs:complexType name="citizensType"> 
+		<xs:sequence>
+			<xs:element name ="citizen" type="fs:citizenType" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="citizenType">
+		<xs:sequence>
+			<xs:element name="gen_info" type="fs:gen_infoType"/>
+			<xs:element name="med_hist" type="fs:med_histType"/>
+			<xs:element name="social_hist"  type="fs:social_histType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="c_ID" type="xs:string" use="required"/>
+	</xs:complexType>
+
+<!-- Declaring general information fields -->
+	<xs:complexType name="gen_infoType">
+		<xs:sequence>
+			<xs:element name="lastname" type="xs:string"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="date_of_birth" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="weight" type="xs:string"/>
+			<xs:element name="height" type="xs:string"/>
+			<xs:element name="address" type="xs:string"/>
+			<xs:element name="zipcode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{5}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="phone_number"> 
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{10}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nationality" type="xs:string"/>
+			<xs:element name="email_address">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[^@]+@[^\.]+\..+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Declaring Medical history fields -->
+	<xs:complexType name="med_histType">
+		<xs:sequence>
+			<xs:element name="consultation" type="fs:consultationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="hospitalization" type="fs:hospitalizationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="laboratory"  type="fs:laboratoryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="vaccination_stat"  type="fs:vaccination_statType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- Declaring consultations history-->
+	<xs:complexType name="consultationType" >
+		<xs:sequence>
+			<xs:element name="doctor" type="xs:string">
+			</xs:element>
+			<xs:element name="date_cons" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="doc_speciality" type="xs:string"/>
+			<xs:element name="code_cons">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="SERIOUS"/>
+						<xs:enumeration value="AVERAGE"/>
+						<xs:enumeration value="ROUTINE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="refdoctorID" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- Declaring hospitalization history-->
+	<xs:complexType name="hospitalizationType">
+		<xs:sequence>
+			<xs:element name="hospital" type="xs:string"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+			<xs:element name="date_hosp" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="hosp_speciality" type="xs:string"/>
+			<xs:element name="code_hosp">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="SERIOUS"/>
+						<xs:enumeration value="AVERAGE"/>
+						<xs:enumeration value="ROUTINE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Declaring laboratory tests history-->
+	<xs:complexType name="laboratoryType">
+		<xs:sequence>
+			<xs:element name="test_type" type="xs:string"/>
+			<xs:element name="date_test" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+			<xs:element name="test_result">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="POSITIVE"/>
+						<xs:enumeration value="NEGATIVE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Declaring vaccinations history-->
+	<xs:complexType name="vaccination_statType">
+		<xs:sequence>
+			<xs:element name="vaccine_type" type="xs:string"/>
+			<xs:element name="date_vaccination" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+			<xs:element name="vaccinated" type="xs:boolean"/>
+		</xs:sequence>
+		<xs:attribute name="refvaccineID" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- Declaring social relations history-->
+	<xs:complexType name="social_histType">
+		<xs:sequence>
+			<xs:element name="event" type="fs:eventType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="eventType" >
+		<xs:sequence>
+			<xs:element name="event_type" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="PUBLIC"/>
+						<xs:enumeration value="PRIVATE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="event_name" type="xs:string"/>
+			<xs:element name="event_city" type="xs:string"/>
+			<xs:element name="event_country" type="xs:string"/>
+			<xs:element name="event_date" type="xs:date" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+<!-- ########################### End of citizen info fields declaration ########################### -->
+
+<!-- ########################### Declaring doctor info fields ########################### -->
+	<xs:complexType name="doctorType">
+		<xs:sequence>
+			<xs:element name="doctor" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="doctor_last_name" type="xs:string"/>
+						<xs:element name="doctor_first_name" type="xs:string"/>
+						<xs:element name="doctor_speciality" type ="xs:string" />
+					</xs:sequence>
+					<xs:attribute name="d_ID" type="xs:string" use="required"/>
+				</xs:complexType>
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+<!-- ########################### End of doctor info fields declaration ###########################-->
+	
+<!-- ########################### Declaring vaccine info fields ########################### -->
+	<xs:complexType name="vaccineType">
+		<xs:sequence>
+			<xs:element name="vaccine" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="vaccine_name" type="xs:string"/>
+						<xs:element name="vaccine_info" type="xs:string"/>
+						<xs:element name="vaccine_dose" type ="xs:string" />
+					</xs:sequence>
+					<xs:attribute name="v_ID" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+<!-- ########################### End of vaccine info fields declaration ########################### -->
+
+
+
+
+
+</xs:schema>

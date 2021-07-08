@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:fs="https://datapipelineassignment.org/XML">
+	<body>
+		<h1 style="text-align:center;"> Scenario 4 Datapipeline Assigmment</h1><h3 style="text-align:center;"> Scenario created proportionate a Data Base to Doctors like few general information of citizen, their patients and medical history of their patients </h3><strong>
+			Welcome Dr. DOE , JOHN Specialty: Traumatology
+		</strong><br />
+		Welcome to the Doctor's DATA base, you have a Data of 3 patients
+		<br /><br /><table border="1">
+			<tr>
+				<th>Consultation's Date</th>
+				<td>2021-05-15</td>
+				<th>Severity Code</th>
+				<td>SERIOUS</td>
+				<th>Patient's ID</th>
+				<td>C00001</td>
+				<th>Last name</th>
+				<td>LOPEZ</td>
+				<th>First name</th>
+				<td>NELSON</td>
+				<th>Email</th>
+				<td>nelsonlbass@gmail.com</td>
+				<th>Phone number</th>
+				<td>0749205224</td>
+			</tr>
+		</table><table border="1">
+			<tr>
+				<th>Consultation's Date</th>
+				<td>2021-05-15</td>
+				<th>Severity Code</th>
+				<td>SERIOUS</td>
+				<th>Patient's ID</th>
+				<td>C00001</td>
+				<th>Last name</th>
+				<td>LOPEZ</td>
+				<th>First name</th>
+				<td>NELSON</td>
+				<th>Email</th>
+				<td>nelsonlbass@gmail.com</td>
+				<th>Phone number</th>
+				<td>0749205224</td>
+			</tr>
+		</table><table border="1">
+			<tr>
+				<th>Consultation's Date</th>
+				<td>2021-01-15</td>
+				<th>Severity Code</th>
+				<td>AVERAGE</td>
+				<th>Patient's ID</th>
+				<td>C00004</td>
+				<th>Last name</th>
+				<td>VILLAMIZAR</td>
+				<th>First name</th>
+				<td>CAMILO</td>
+				<th>Email</th>
+				<td>nnnn@gmail.com</td>
+				<th>Phone number</th>
+				<td>1234567897</td>
+			</tr>
+		</table><br />
+	</body>
+</html>

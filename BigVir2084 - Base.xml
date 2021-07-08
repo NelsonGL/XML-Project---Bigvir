@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fs:BigVir2084_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:fs="https://datapipelineassignment.org/XML"
+xsi:schemaLocation="https://datapipelineassignment.org/XML BigVir2084-Schema.xsd">
+	<fs:citizens>
+		<fs:citizen c_ID="C00001">
+			<fs:gen_info>
+				<fs:lastname>LOPEZ</fs:lastname>
+				<fs:name>NELSON</fs:name>
+				<fs:date_of_birth>1992-07-31</fs:date_of_birth>
+				<fs:weight>105</fs:weight>
+				<fs:height>192</fs:height>
+				<fs:address>REIMS</fs:address>
+				<fs:zipcode>51100</fs:zipcode>
+				<fs:phone_number>0749205224</fs:phone_number>
+				<fs:nationality>VEN</fs:nationality>
+				<fs:email_address>nnnn@gmail.com</fs:email_address>
+			</fs:gen_info>
+			<fs:med_hist>
+				<fs:consultation refdoctorID="DTR_1">
+					<fs:doctor>DOE JOHN</fs:doctor>
+					<fs:date_cons>2021-05-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>SERIOUS</fs:code_cons>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+				</fs:consultation>
+				<fs:hospitalization>
+					<fs:hospital>REIMS HOSPITAL</fs:hospital>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:date_hosp>2020-12-26</fs:date_hosp>
+					<fs:hosp_speciality>TRAUMA</fs:hosp_speciality>
+					<fs:code_hosp>SERIOUS</fs:code_hosp>
+				</fs:hospitalization>
+				<fs:laboratory>
+					<fs:test_type>COVID 19</fs:test_type>
+					<fs:date_test>2021-04-15</fs:date_test>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:test_result>POSITIVE</fs:test_result>
+				</fs:laboratory>
+				<fs:vaccination_stat refvaccineID="VCOV_1.1">
+					<fs:vaccine_type>COVID 19</fs:vaccine_type>
+					<fs:date_vaccination>2010-06-30</fs:date_vaccination>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+			</fs:med_hist>
+			<fs:social_hist>
+				<fs:event>
+					<fs:event_type>PUBLIC</fs:event_type>
+					<fs:event_name>MUSIC PARTY</fs:event_name>
+					<fs:event_city></fs:event_city>
+					<fs:event_country></fs:event_country>
+					<fs:event_date>2020-05-30</fs:event_date>
+				</fs:event>
+			</fs:social_hist>
+		</fs:citizen>
+		
+	</fs:citizens>
+	<fs:doctor>
+		<fs:doctor d_ID="DTR_1">
+			<fs:doctor_last_name>DOE </fs:doctor_last_name>
+			<fs:doctor_first_name>JOHN</fs:doctor_first_name>
+			<fs:doctor_speciality>Traumatology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DTR_2">
+			<fs:doctor_last_name>REY</fs:doctor_last_name>
+			<fs:doctor_first_name>ADRIANA</fs:doctor_first_name>
+			<fs:doctor_speciality>Traumatology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DGEN_1">
+			<fs:doctor_last_name>ABONDANO</fs:doctor_last_name>
+			<fs:doctor_first_name>ALEJANDRO</fs:doctor_first_name>
+			<fs:doctor_speciality>Generalist</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DOTO_1">
+			<fs:doctor_last_name>ACERO</fs:doctor_last_name>
+			<fs:doctor_first_name>ANDREA</fs:doctor_first_name>
+			<fs:doctor_speciality>Otorhinolaryngology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DGEN_2">
+			<fs:doctor_last_name>MAHECHA</fs:doctor_last_name>
+			<fs:doctor_first_name>ANGELA</fs:doctor_first_name>
+			<fs:doctor_speciality>Generalist</fs:doctor_speciality>
+		</fs:doctor>
+	</fs:doctor>
+	<fs:vaccine>
+		<fs:vaccine v_ID="VCOV_1.1">
+			<fs:vaccine_name>Covid 19</fs:vaccine_name>
+			<fs:vaccine_info>1st Dose</fs:vaccine_info>
+			<fs:vaccine_dose>2</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VCOV_1.2">
+			<fs:vaccine_name>Covid 19</fs:vaccine_name>
+			<fs:vaccine_info>2nd Dose</fs:vaccine_info>
+			<fs:vaccine_dose>2</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VPOL">
+			<fs:vaccine_name>Polio</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VMEN">
+			<fs:vaccine_name>Meningitis</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VRU">
+			<fs:vaccine_name>Rubella</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VTET">
+			<fs:vaccine_name>Tetanus</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+
+	</fs:vaccine>
+
+</fs:BigVir2084_database>

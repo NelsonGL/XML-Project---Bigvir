@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fs:BigVir2084_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:fs="https://datapipelineassignment.org/XML"
+xsi:schemaLocation="https://datapipelineassignment.org/XML BigVir2084-Schema.xsd">
+	<fs:citizens>
+		<fs:citizen c_ID="C00001">
+			<fs:gen_info>
+				<fs:lastname>LOPEZ</fs:lastname>
+				<fs:name>NELSON</fs:name>
+				<fs:date_of_birth>1992-07-31</fs:date_of_birth>
+				<fs:weight>105</fs:weight>
+				<fs:height>192</fs:height>
+				<fs:address>REIMS</fs:address>
+				<fs:zipcode>51100</fs:zipcode>
+				<fs:phone_number>0749205224</fs:phone_number>
+				<fs:nationality>VEN</fs:nationality>
+				<fs:email_address>nelsonlbass@gmail.com</fs:email_address>
+			</fs:gen_info>
+			<fs:med_hist>
+				<fs:consultation refdoctorID="DTR_1">
+					<fs:doctor>DOE JOHN</fs:doctor>
+					<fs:date_cons>2021-05-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>SERIOUS</fs:code_cons>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+				</fs:consultation>
+				<fs:consultation refdoctorID="DTR_1">
+					<fs:doctor>DOE JOHN</fs:doctor>
+					<fs:date_cons>2021-05-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>SERIOUS</fs:code_cons>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+				</fs:consultation>
+				<fs:hospitalization>
+					<fs:hospital>REIMS HOSPITAL</fs:hospital>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:date_hosp>2020-12-26</fs:date_hosp>
+					<fs:hosp_speciality>TRAUMA</fs:hosp_speciality>
+					<fs:code_hosp>SERIOUS</fs:code_hosp>
+				</fs:hospitalization>
+				<fs:laboratory>
+					<fs:test_type>COVID 19</fs:test_type>
+					<fs:date_test>2021-04-15</fs:date_test>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:test_result>POSITIVE</fs:test_result>
+				</fs:laboratory>
+				<fs:vaccination_stat refvaccineID="VCOV_1.1">
+					<fs:vaccine_type>COVID 19</fs:vaccine_type>
+					<fs:date_vaccination>2010-06-30</fs:date_vaccination>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+			</fs:med_hist>
+			<fs:social_hist>
+				<fs:event>
+					<fs:event_type>PUBLIC</fs:event_type>
+					<fs:event_name>MUSIC PARTY</fs:event_name>
+					<fs:event_city>REIMS</fs:event_city>
+					<fs:event_country>FRANCE</fs:event_country>
+					<fs:event_date>2020-05-30</fs:event_date>
+				</fs:event>
+			</fs:social_hist>
+		</fs:citizen>
+		<fs:citizen c_ID="C00002">
+			<fs:gen_info>
+				<fs:lastname>FERNÁNDEZ</fs:lastname>
+				<fs:name>ANGIE</fs:name>
+				<fs:date_of_birth>1995-07-31</fs:date_of_birth>
+				<fs:weight>60</fs:weight>
+				<fs:height>170</fs:height>
+				<fs:address>PARIS</fs:address>
+				<fs:zipcode>75000</fs:zipcode>
+				<fs:phone_number>1234567891</fs:phone_number>
+				<fs:nationality>FR</fs:nationality>
+				<fs:email_address>WQRQWRQW@gmail.com</fs:email_address>
+			</fs:gen_info>
+			<fs:med_hist>
+				<fs:laboratory>
+					<fs:test_type>COVID 19</fs:test_type>
+					<fs:date_test>2021-05-16</fs:date_test>
+					<fs:city>PARIS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:test_result>NEGATIVE</fs:test_result>
+				</fs:laboratory>
+				<fs:vaccination_stat refvaccineID="VCOV_1.1">
+					<fs:vaccine_type>COVID 19</fs:vaccine_type>
+					<fs:date_vaccination>2010-06-30</fs:date_vaccination>
+					<fs:city>PARIS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+				<fs:vaccination_stat refvaccineID="VCOV_1.2">
+					<fs:vaccine_type>COVID 19</fs:vaccine_type>
+					<fs:date_vaccination>2010-07-30</fs:date_vaccination>
+					<fs:city>PARIS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+			</fs:med_hist>
+			<fs:social_hist>
+				<fs:event>
+					<fs:event_type>PUBLIC</fs:event_type>
+					<fs:event_name>MUSIC PARTY</fs:event_name>
+					<fs:event_city>BRUXELLES</fs:event_city>
+					<fs:event_country>BELGIUM</fs:event_country>
+					<fs:event_date>2020-07-15</fs:event_date>
+				</fs:event>
+				<fs:event>
+					<fs:event_type>PRIVATE</fs:event_type>
+					<fs:event_name>WEDDING</fs:event_name>
+					<fs:event_city>PARIS</fs:event_city>
+					<fs:event_country>FRANCE</fs:event_country>
+					<fs:event_date>2020-06-15</fs:event_date>
+				</fs:event>
+			</fs:social_hist>
+		</fs:citizen>
+		<fs:citizen c_ID="C00003">
+			<fs:gen_info>
+				<fs:lastname>POLANCO</fs:lastname>
+				<fs:name>BRIGITE</fs:name>
+				<fs:date_of_birth>2000-06-30</fs:date_of_birth>
+				<fs:weight>60</fs:weight>
+				<fs:height>175</fs:height>
+				<fs:address>MARSEILLE</fs:address>
+				<fs:zipcode>80000</fs:zipcode>
+				<fs:phone_number>1234567891</fs:phone_number>
+				<fs:nationality>BEL</fs:nationality>
+				<fs:email_address>FDSHGFDSH@gmail.com</fs:email_address>
+			</fs:gen_info>
+			<fs:med_hist>
+				<fs:consultation refdoctorID="DTR_2">
+					<fs:doctor>ADRIANA REY</fs:doctor>
+					<fs:date_cons>2020-04-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>AVERAGE</fs:code_cons>
+					<fs:city>BRUXELLES</fs:city>
+					<fs:country>BELGIUM</fs:country>
+				</fs:consultation>
+				<fs:laboratory>
+					<fs:test_type>COVID 19</fs:test_type>
+					<fs:date_test>2021-01-15</fs:date_test>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:test_result>POSITIVE</fs:test_result>
+				</fs:laboratory>
+				<fs:vaccination_stat refvaccineID="VCOV_1.1">
+					<fs:vaccine_type>COVID 19</fs:vaccine_type>
+					<fs:date_vaccination>2010-02-27</fs:date_vaccination>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+			</fs:med_hist>
+			<fs:social_hist>
+				<fs:event>
+					<fs:event_type>PRIVATE</fs:event_type>
+					<fs:event_name>WEDDING</fs:event_name>
+					<fs:event_city>PARIS</fs:event_city>
+					<fs:event_country>FRANCE</fs:event_country>
+					<fs:event_date>2020-04-30</fs:event_date>
+				</fs:event>
+			</fs:social_hist>
+		</fs:citizen>
+		<fs:citizen c_ID="C00004">
+			<fs:gen_info>
+				<fs:lastname>VILLAMIZAR</fs:lastname>
+				<fs:name>CAMILO</fs:name>
+				<fs:date_of_birth>1992-08-30</fs:date_of_birth>
+				<fs:weight>90</fs:weight>
+				<fs:height>190</fs:height>
+				<fs:address>REIMS</fs:address>
+				<fs:zipcode>51100</fs:zipcode>
+				<fs:phone_number>1234567897</fs:phone_number>
+				<fs:nationality>FR</fs:nationality>
+				<fs:email_address>nnnn@gmail.com</fs:email_address>
+			</fs:gen_info>
+			<fs:med_hist>
+				<fs:consultation refdoctorID="DTR_1">
+					<fs:doctor>DOE JOHN</fs:doctor>
+					<fs:date_cons>2021-01-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>AVERAGE</fs:code_cons>
+					<fs:city>PARIS</fs:city>
+					<fs:country>FRANCE</fs:country>
+				</fs:consultation>
+				<fs:consultation refdoctorID="DGEN_1">
+					<fs:doctor>DOE JOHN</fs:doctor>
+					<fs:date_cons>2021-05-15</fs:date_cons>
+					<fs:doc_speciality>TRAUMA</fs:doc_speciality>
+					<fs:code_cons>SERIOUS</fs:code_cons>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+				</fs:consultation>
+				<fs:hospitalization>
+					<fs:hospital>REIMS HOSPITAL</fs:hospital>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:date_hosp>2020-12-26</fs:date_hosp>
+					<fs:hosp_speciality>RESPIRATORY</fs:hosp_speciality>
+					<fs:code_hosp>SERIOUS</fs:code_hosp>
+				</fs:hospitalization>
+				<fs:laboratory>
+					<fs:test_type>TETANUS</fs:test_type>
+					<fs:date_test>2021-04-15</fs:date_test>
+					<fs:city>REIMS</fs:city>
+					<fs:country>FRANCE</fs:country>
+					<fs:test_result>NEGATIVE</fs:test_result>
+				</fs:laboratory>
+				<fs:vaccination_stat refvaccineID="VTET">
+					<fs:vaccine_type>TETANUS</fs:vaccine_type>
+					<fs:date_vaccination>2010-06-30</fs:date_vaccination>
+					<fs:city>BRUXELLES</fs:city>
+					<fs:country>BELGIUM</fs:country>
+					<fs:vaccinated>true</fs:vaccinated>
+				</fs:vaccination_stat>
+			</fs:med_hist>
+			<fs:social_hist>
+				<fs:event>
+					<fs:event_type>PUBLIC</fs:event_type>
+					<fs:event_name>MUSIC PARTY</fs:event_name>
+					<fs:event_city></fs:event_city>
+					<fs:event_country></fs:event_country>
+					<fs:event_date>2021-04-30</fs:event_date>
+				</fs:event>
+				<fs:event>
+					<fs:event_type>PRIVATE</fs:event_type>
+					<fs:event_name>WEDDING</fs:event_name>
+					<fs:event_city>AMSTERDAM</fs:event_city>
+					<fs:event_country>NETHERLANDS</fs:event_country>
+					<fs:event_date>2021-04-30</fs:event_date>
+				</fs:event>
+				<fs:event>
+					<fs:event_type>PUBLIC</fs:event_type>
+					<fs:event_name>MALL CENTER</fs:event_name>
+					<fs:event_city>PARIS</fs:event_city>
+					<fs:event_country>FRANCE</fs:event_country>
+					<fs:event_date>2021-06-20</fs:event_date>
+				</fs:event>
+			</fs:social_hist>
+		</fs:citizen>
+	</fs:citizens>
+	<fs:doctor>
+		<fs:doctor d_ID="DTR_1">
+			<fs:doctor_last_name>DOE </fs:doctor_last_name>
+			<fs:doctor_first_name>JOHN</fs:doctor_first_name>
+			<fs:doctor_speciality>Traumatology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DTR_2">
+			<fs:doctor_last_name>REY</fs:doctor_last_name>
+			<fs:doctor_first_name>ADRIANA</fs:doctor_first_name>
+			<fs:doctor_speciality>Traumatology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DGEN_1">
+			<fs:doctor_last_name>ABONDANO</fs:doctor_last_name>
+			<fs:doctor_first_name>ALEJANDRO</fs:doctor_first_name>
+			<fs:doctor_speciality>Generalist</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DOTO_1">
+			<fs:doctor_last_name>ACERO</fs:doctor_last_name>
+			<fs:doctor_first_name>ANDREA</fs:doctor_first_name>
+			<fs:doctor_speciality>Otorhinolaryngology</fs:doctor_speciality>
+		</fs:doctor>
+		<fs:doctor d_ID="DGEN_2">
+			<fs:doctor_last_name>MAHECHA</fs:doctor_last_name>
+			<fs:doctor_first_name>ANGELA</fs:doctor_first_name>
+			<fs:doctor_speciality>Generalist</fs:doctor_speciality>
+		</fs:doctor>
+	</fs:doctor>
+	<fs:vaccine>
+		<fs:vaccine v_ID="VCOV_1.1">
+			<fs:vaccine_name>Covid 19</fs:vaccine_name>
+			<fs:vaccine_info>1st Dose</fs:vaccine_info>
+			<fs:vaccine_dose>2</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VCOV_1.2">
+			<fs:vaccine_name>Covid 19</fs:vaccine_name>
+			<fs:vaccine_info>2nd Dose</fs:vaccine_info>
+			<fs:vaccine_dose>2</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VPOL">
+			<fs:vaccine_name>Polio</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VMEN">
+			<fs:vaccine_name>Meningitis</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VRU">
+			<fs:vaccine_name>Rubella</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		<fs:vaccine v_ID="VTET">
+			<fs:vaccine_name>Tetanus</fs:vaccine_name>
+			<fs:vaccine_info></fs:vaccine_info>
+			<fs:vaccine_dose>1</fs:vaccine_dose>
+		</fs:vaccine>
+		
+	</fs:vaccine>
+
+</fs:BigVir2084_database>
